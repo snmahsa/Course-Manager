@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+
+{%block content %}
+<h1>Welcome to the Course Manager</h1>
+<nav>
+    <a href="{{ url_for('profile') }}">Profile</a>
+    <a href="{{ url_for('courses_page') }}">Courses</a>
+    <a href="{{ url_for('add_course') }}">Add Course</a>
+</nav>
+
+{%endblock%}
