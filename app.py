@@ -25,6 +25,17 @@ def limit(s):
     splited =s.split()[:1]
     return "".join(splited) + '...'
 
+@app.route('/add_course' ,methods=['POST',"GET"])
+def add_course():
+    name = request.form['name']
+    teacher = request.form['teacher']
+    description = request.form['description']
+    if not name or not teacher or not description :
+        return redirect('/errors')
+    
+    courses_len = len(courses_list)
+    courses_list.append({"id":courses_len + 1 , "name" : name , "teacher": teacher, "description":description})
+    return redirect('/cources')
 
 
 
