@@ -1,6 +1,33 @@
 {%extends 'base.html'%}
 
 {%block content %}
+<table >
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Teacher</td>
+        </tr>
+    </thead>
+  
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    {%endfor%}
+</table>
+
+
+<form method ="post" action="/add_course" class="course-form">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="text" name="teacher" placeholder="teacher" required>
+    <textarea name="description" placeholder="description" required></textarea>
+    <button type="submit">Add</button>
+</form>
 
 
 {%endblock%}
