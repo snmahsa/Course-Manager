@@ -20,6 +20,11 @@ def courses():
     return render_template('courses_page.html',courses_list = courses_list )
 
 
+@app.template_filter('limit')
+def limit(s):
+    splited =s.split()[:1]
+    return "".join(splited) + '...'
+
 
 
 
