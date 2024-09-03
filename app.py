@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from data import courses_list, student_info
 app = Flask(__name__)
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -36,12 +37,6 @@ def add_course():
     courses_len = len(courses_list)
     courses_list.append({"id":courses_len + 1 , "name" : name , "teacher": teacher, "description":description})
     return redirect('/cources')
-
-
-
-
-
-
 
 
 
