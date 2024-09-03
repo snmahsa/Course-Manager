@@ -15,6 +15,9 @@ def profile():
     return render_template('profile.html',student =student_info)
 
 
+@app.route('/courses')
+def courses():
+    return render_template('courses_page.html',courses_list = courses_list )
 
 
 
