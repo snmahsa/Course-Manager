@@ -5,9 +5,26 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/profile')
+@app.route('/profile', methods=['POST','GET'])
 def profile():
-    return render_template('profile.html', course = courses_list)
+    if request.method == 'POST':
+        student_info['name'] = request.form['name']
+        student_info['email'] = request.form['email']
+        student_info['major'] = request.form['major']
+
+    return render_template('profile.html',student =student_info)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
