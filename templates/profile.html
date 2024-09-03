@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block content %}
+<div class="profile-container">
+    <p>Name :{{student.name | upper}}</p>
+    <p>Email :{{student.email | lower}}</p>
+    <p>Major :{{student.major | capitalize}}</p>
+    </div>
+    
+    
+    <form action="/profile" method="post">
+        <input type="text" name="name" value="{{student.name}}">
+        <input type="text" name="email" value="{{student.email}}">
+        <input type="text" name="major" value="{{student.major}}">
+        <button type="submit">Update</button>
+    </form>
+{%endblock%}
