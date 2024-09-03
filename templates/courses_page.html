@@ -10,12 +10,12 @@
             <td>Teacher</td>
         </tr>
     </thead>
-  
+    {% for item in courses_list %}
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description | limit}}</td>
+        <td>{{item.teacher}}</td>
     </tr>
 
     {%endfor%}
