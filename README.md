@@ -32,8 +32,8 @@ The "Student Portal" project is a web application built using the Flask framewor
 
 ### Project Structure
 The project includes the following directories and files: 
-project_name/
-├── app/
+```
+├── project/
 │ ├── app.py
 │ ├── templates/
 │ │ ├── base.html
@@ -43,8 +43,9 @@ project_name/
 │ │ ├── header.html
 │ │ └── footer.html
 │ └── static/
-│ ├── css/
-│ └── style.css
+│     ├── css/
+│        └── style.css
 └── data/
-├── constants.py
-└── init.py
+    ├── constants.py
+    └── init.py
+```
